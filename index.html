@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/fav.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Objectways | Employee Form</title>
+</head>
+
+<body>
+    <div class="wholePage">
+        <div class="obj_img">
+            <img src="images/Objectways_logo.png" alt="Objectways_logo" />
+        </div>
+        <div class="container  justify-content-center form">
+            <form name="google-sheet" id="form_alerts" method="POST">
+                <div class="form_alerts"></div>
+                <p class="headPara">Employee Application Form</p>
+                <p class="headParaOne">Personal Data :</p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="name" id="name" name="Name" class="form-control" id="floatingInput" placeholder="name@example.com"
+                              />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="name" id="lastname" name="Employee Id" class="form-control lastName" id="floatingInput"
+                                placeholder="name@example.com"  />
+                            <label>Employee Id</label>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="form-floating col-6">
+                      
+                            <input type="email" class="form-control" name="Employee Mail Id" id="floatingInput" placeholder="name@example.com" />
+                            <label class="labelThree">Employee Mail Id</label>
+                        </div>
+                        <div class="form-floating col-6">
+                        <input type="date" name="Date Of Joining" class="form-control" id="floatingInput" placeholder="name@example.com"
+                             />
+                        <label class="labelThree">Date Of Joining</label>
+                    </div>
+               
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="form-floating col-6">
+                
+                            <input type="phone" class="form-control" name="Employee Personal Contact Number" id="floatingInput" placeholder="name@example.com" />
+                            <label class="labelThree">Employee Personal Contact Number</label>
+                        </div>
+                        <div class="form-floating col-6">
+                        <Select class="form-select" name="Work Location" aria-label="Default select example">
+                            <option>Work Location</option>
+                            <option value="Unit 1">Unit 1</option>
+                            <option value="Unit 2">Unit 2</option>
+                            <option value="Unit 3">Unit 3</option>
+                            <option value="Unit 4">Unit 4</option>
+                        </Select>
+                    </div>
+                 
+                    <br />
+                </div>
+                <br>
+                <br />
+                <div class="row">
+                    
+                    <div class="form-floating mb-7 col-6">
+                       
+                        
+                            <input type="text" class="form-control" name="Project Name" id="floatingInput" placeholder="Personal Contact"
+                                />
+                            <label class="labelThree">Project Name</label>
+                        </div>
+             
+                    <div class="form-floating mb-3 col-6">
+                        
+                        <input type="phone" class="form-control" name="Project Manager" id="floatingInput" placeholder="Personal Contact"
+                            />
+                        <label class="labelThree">Project Manager</label>
+                    </div>
+
+                    <br />
+                </div>
+                <br />
+              
+                <div class="d-flex justify-content-center pb-5">
+                    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+                    <button class="btn btn-danger" type="reset">Reset the form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZAy642vYCKDYi_ItaTNLPyj3x_PxD53szvCxJ0rrYqN6LU5SbUtU62-rrpEVDWNjBKQ/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, {  mode: 'no-cors', method: 'POST', body: new FormData(form)})
+            .then(response => $('#form_alerts').html("<div class='alert alert-sucess'>Form submited successfully.</div>"))
+            .catch(error => $('#form_alerts').html("<div class='alert alert-danger'>Form not submitted.</div>"))
+        })
+      </script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    color: black;
+    border-radius: 10px;
+  
+  }
+  
+  
+  .wholepage {
+    border-radius: 10px !important;
+  }
+  
+  .wholePage input,
+  Select {
+    background-color: whitesmoke !important;
+  }
+  
+  .headPara {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .headParaOne{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  body {
+    background-color: #dfdfdf !important;
+    margin-left: 17% !important;
+    margin-right: 17% !important;
+    margin-top: 3% !important;
+    margin-bottom: 3% !important;
+    box-shadow: 0px 0px 40px 1px grey;
+  }
+  
+  .wholePage {
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  
+  .obj_img {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .labelThree {
+    margin-left: 3%;
+  }
+  
+  .select {
+    padding-top: 10px !important;
+  }
+  
+  .submitButton {
+    margin-bottom: 4.7%;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    font-size: 21px !important;
+  }
+  
+  .submitButton:hover {
+    color: black !important;
+    background-color: white !important;
+    border-color: black !important;
+  }
+  
+  .gender {
+    margin-top: 10px !important;
+  }
+  
+  .paraTwo a {
+    text-decoration: none;
+  }
+  
+  .present_add {
+    padding-bottom: 20% !important;
+  height: 130px !important;
+  }
+  .form-floating>.form-control, .form-floating>.form-control-plaintext {
+    padding: 1rem -0.25rem;
+}
+.form-floating>.form-select {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
